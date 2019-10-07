@@ -6,4 +6,17 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+  <section class="chart-container ion-justify-content-center">
+    <div class="chart ion-justify-content-center ion-align-items-center" id="donutChart">
+      <ion-item class="chart-labels__container">
+        <ion-label>
+          {{ title }}
+        </ion-label>
+        <ion-label>
+          {{ value }}
+        </ion-label>
+      </ion-item>
+    </div>
+  </section>
+</ion-content>

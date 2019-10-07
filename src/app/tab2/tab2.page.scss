@@ -1,1 +1,38 @@
+$xxs: 340px;
+$xs: 480px;
+$sm: 576px;
+$lg: 992px;
+$xl: 1200px;
 
+@mixin from($size) {
+  @media(max-width: $size) {
+    @content;
+  }
+}
+.chart {
+  height: 18.75rem;
+  width: 18.75rem;
+  display: flex;
+  @include from($sm) {
+    height: 25rem;
+    width: 25rem;
+  }
+  &-container {
+    background-color: #364255;
+    height: 100%;
+    display: flex;
+  }
+  &-labels {
+    &__container {
+      --background: #364255;
+      position: absolute;
+      --color: white;
+    }
+  }
+}
+
+.arc:hover {
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
